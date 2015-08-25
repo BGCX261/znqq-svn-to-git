@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF25E96A-AA4E-4417-B945-8AC65DF36747}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZNQQ</RootNamespace>
+    <AssemblyName>ZNQQ</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataCap\ZNRSocket.cs" />
+    <Compile Include="frmCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapture.Designer.cs">
+      <DependentUpon>frmCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SP0x00CD.cs" />
+    <Compile Include="QQListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QQListForm.Designer.cs">
+      <DependentUpon>QQListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QQNUM.cs" />
+    <Compile Include="QQPACK.cs" />
+    <Compile Include="SqlService.cs" />
+    <Compile Include="DataCap\RawSocket.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageHelper.cs" />
+    <Compile Include="QQCrypt.cs" />
+    <Compile Include="CP0x0825.cs" />
+    <Compile Include="CP0x0826.cs" />
+    <Compile Include="CP0x0828.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD5Helper.cs" />
+    <Compile Include="PCQQForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCQQForm.Designer.cs">
+      <DependentUpon>PCQQForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapture.resx">
+      <DependentUpon>frmCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCQQForm.resx">
+      <DependentUpon>PCQQForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QQListForm.resx">
+      <DependentUpon>QQListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QQService.cs" />
+    <Compile Include="QQUser.cs" />
+    <Compile Include="RP0X0825.cs" />
+    <Compile Include="RP0X0826.cs" />
+    <Compile Include="RP0X0828.cs" />
+    <Compile Include="RPBase.cs" />
+    <Compile Include="SP0x001D.cs" />
+    <Compile Include="SP0X0825.cs" />
+    <Compile Include="SP0X0826.cs" />
+    <Compile Include="SP0X0828.cs" />
+    <Compile Include="SPBase.cs" />
+    <Compile Include="TCPClass.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="UDPClass.cs" />
+    <Compile Include="SP0x01BB.cs" />
+    <Compile Include="SP0x0017.cs" />
+    <Compile Include="SP0x010B.cs" />
+    <Compile Include="SP0x00B9.cs" />
+    <Compile Include="SP0x0134.cs" />
+    <Compile Include="SP0x00EC.cs" />
+    <Compile Include="SP0x00D1.cs" />
+    <Compile Include="SP0x0062.cs" />
+    <Compile Include="SP0x0058.cs" />
+    <Compile Include="SP0X08282013.cs" />
+    <Compile Include="SP0x00EC2013.cs" />
+    <Compile Include="SP0x00622013.cs" />
+    <Compile Include="SP0x00582013.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QQimg\13797.gif" />
+    <Content Include="QQimg\13798.gif" />
+    <Content Include="QQimg\13799.gif" />
+    <Content Include="QQimg\13800.gif" />
+    <Content Include="QQimg\13803.gif" />
+    <Content Include="QQimg\13804.gif" />
+    <Content Include="QQimg\13809.gif" />
+    <Content Include="QQimg\13810.gif" />
+    <Content Include="QQimg\13811.gif" />
+    <Content Include="QQimg\13812.gif" />
+    <Content Include="QQimg\13914.gif" />
+    <Content Include="QQimg\13915.gif" />
+    <Content Include="QQimg\13916.gif" />
+    <Content Include="QQimg\13918.gif" />
+    <Content Include="QQimg\13919.gif" />
+    <Content Include="QQimg\13920.gif" />
+    <Content Include="QQimg\13926.gif" />
+    <Content Include="QQimg\13927.gif" />
+    <Content Include="QQimg\13953.gif" />
+    <Content Include="QQimg\13954.gif" />
+    <Content Include="QQimg\13955.gif" />
+    <Content Include="QQimg\13956.gif" />
+    <Content Include="QQimg\13957.gif" />
+    <Content Include="QQimg\13958.gif" />
+    <Content Include="QQimg\13959.gif" />
+    <Content Include="QQimg\13960.gif" />
+    <Content Include="QQimg\13961.gif" />
+    <Content Include="QQimg\13962.gif" />
+    <Content Include="QQimg\13963.gif" />
+    <Content Include="QQimg\13971.gif" />
+    <Content Include="QQimg\13972.gif" />
+    <Content Include="QQimg\13973.gif" />
+    <Content Include="QQimg\13974.gif" />
+    <Content Include="QQimg\13975.gif" />
+    <Content Include="QQimg\13976.gif" />
+    <Content Include="QQimg\13977.gif" />
+    <Content Include="QQimg\13979.gif" />
+    <Content Include="QQimg\13980.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QQstatus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.BLL\App.BLL.csproj">
+      <Project>{EC6D37DD-CEF4-4E7E-A4E2-E90829A1B3F5}</Project>
+      <Name>App.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Common\App.Common.csproj">
+      <Project>{F7309C46-B015-425B-B929-338F90A5B682}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Config\App.Config.csproj">
+      <Project>{1327A138-9082-4480-B612-94A1FB4521FE}</Project>
+      <Name>App.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.DALFactory\App.DALFactory.csproj">
+      <Project>{63D5B865-C045-4FBC-86AC-18E082006408}</Project>
+      <Name>App.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.DALSQLServer\App.DALSQLServer.csproj">
+      <Project>{783B233A-2516-44BE-9457-0A23949DB407}</Project>
+      <Name>App.DALSQLServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Model\App.Model.csproj">
+      <Project>{5A4717F3-8A33-46E4-B14A-EF382425C64D}</Project>
+      <Name>App.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

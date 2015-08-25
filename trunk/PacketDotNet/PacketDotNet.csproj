@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68A61CC9-0667-4D3B-84EB-7890F7EF8E6B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>PacketDotNet</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="System" />
+    <Compile Include="PacketDotNet\ApplicationPacket.cs" />
+    <Compile Include="PacketDotNet\DataLinkPacket.cs" />
+    <Compile Include="PacketDotNet\EthernetPacket.cs" />
+    <Compile Include="PacketDotNet\EthernetPacketType.cs" />
+    <Compile Include="PacketDotNet\IpPacket.cs" />
+    <Compile Include="PacketDotNet\Packet.cs" />
+    <Compile Include="PacketDotNet\SessionPacket.cs" />
+    <Compile Include="PacketDotNet\TcpPacket.cs" />
+    <Compile Include="PacketDotNet\UdpPacket.cs" />
+    <Compile Include="PacketDotNet\EthernetFields.cs" />
+    <Compile Include="PacketDotNet\TransportPacket.cs" />
+    <Compile Include="PacketDotNet\IPProtocol.cs" />
+    <Compile Include="PacketDotNet\Utils\AnsiEscapeSequences.cs" />
+    <Compile Include="PacketDotNet\UdpFields.cs" />
+    <Compile Include="MiscUtil\IO\EndianBinaryReader.cs" />
+    <Compile Include="MiscUtil\IO\EndianBinaryWriter.cs" />
+    <Compile Include="MiscUtil\Conversion\BigEndianBitConverter.cs" />
+    <Compile Include="MiscUtil\Conversion\DoubleConverter.cs" />
+    <Compile Include="MiscUtil\Conversion\EndianBitConverter.cs" />
+    <Compile Include="MiscUtil\Conversion\Endianness.cs" />
+    <Compile Include="MiscUtil\Conversion\LittleEndianBitConverter.cs" />
+    <Compile Include="PacketDotNet\InternetPacket.cs" />
+    <Compile Include="PacketDotNet\IPv4Fields.cs" />
+    <Compile Include="PacketDotNet\IPv4Packet.cs" />
+    <Compile Include="PacketDotNet\IPv6Fields.cs" />
+    <Compile Include="PacketDotNet\IPv6Packet.cs" />
+    <Compile Include="PacketDotNet\IpPort.cs" />
+    <Compile Include="PacketDotNet\Utils\ChecksumUtils.cs" />
+    <Compile Include="PacketDotNet\TcpFields.cs" />
+    <Compile Include="PacketDotNet\ARPFields.cs" />
+    <Compile Include="PacketDotNet\ARPPacket.cs" />
+    <Compile Include="PacketDotNet\ICMPv6Fields.cs" />
+    <Compile Include="PacketDotNet\ICMPv6Packet.cs" />
+    <Compile Include="PacketDotNet\IGMPMessageType.cs" />
+    <Compile Include="PacketDotNet\IGMPv2Packet.cs" />
+    <Compile Include="PacketDotNet\InternetLinkLayerPacket.cs" />
+    <Compile Include="PacketDotNet\IGMPv2Fields.cs" />
+    <Compile Include="PacketDotNet\LinuxSLLPacket.cs" />
+    <Compile Include="PacketDotNet\LinuxSLLFields.cs" />
+    <Compile Include="PacketDotNet\LinuxSLLType.cs" />
+    <Compile Include="PacketDotNet\IPProtocolType.cs" />
+    <Compile Include="PacketDotNet\IpVersion.cs" />
+    <Compile Include="PacketDotNet\LinkLayers.cs" />
+    <Compile Include="PacketDotNet\Utils\HexPrinter.cs" />
+    <Compile Include="PacketDotNet\PosixTimeval.cs" />
+    <Compile Include="PacketDotNet\ILogInactive.cs" />
+    <Compile Include="PacketDotNet\Utils\RandomUtils.cs" />
+    <Compile Include="PacketDotNet\PayloadType.cs" />
+    <Compile Include="PacketDotNet\ICMPv6Types.cs" />
+    <Compile Include="PacketDotNet\RawPacket.cs" />
+    <Compile Include="PacketDotNet\ARPOperation.cs" />
+    <Compile Include="PacketDotNet\PPPoEPacket.cs" />
+    <Compile Include="PacketDotNet\PPPoEFields.cs" />
+    <Compile Include="PacketDotNet\PPPoECode.cs" />
+    <Compile Include="PacketDotNet\PPPPacket.cs" />
+    <Compile Include="PacketDotNet\PPPFields.cs" />
+    <Compile Include="PacketDotNet\PPPProtocol.cs" />
+    <Compile Include="PacketDotNet\ICMPv4TypeCodes.cs" />
+    <Compile Include="PacketDotNet\ICMPv4Fields.cs" />
+    <Compile Include="PacketDotNet\ICMPv4Packet.cs" />
+    <Compile Include="PacketDotNet\Utils\ByteArraySegment.cs" />
+    <Compile Include="PacketDotNet\PacketOrByteArraySegment.cs" />
+    <Compile Include="PacketDotNet\LLDPPacket.cs" />
+    <Compile Include="PacketDotNet\LLDP\TLVTypes.cs" />
+    <Compile Include="PacketDotNet\LLDP\ChassisSubTypes.cs" />
+    <Compile Include="PacketDotNet\LLDP\PortSubTypes.cs" />
+    <Compile Include="PacketDotNet\LLDP\CapabilityOptions.cs" />
+    <Compile Include="PacketDotNet\LLDP\TLV.cs" />
+    <Compile Include="PacketDotNet\LLDP\NetworkAddress.cs" />
+    <Compile Include="PacketDotNet\LLDP\InterfaceNumbering.cs" />
+    <Compile Include="PacketDotNet\LLDP\EndOfLLDPDU.cs" />
+    <Compile Include="PacketDotNet\LLDP\ChassisID.cs" />
+    <Compile Include="PacketDotNet\LLDP\PortID.cs" />
+    <Compile Include="PacketDotNet\LLDP\TimeToLive.cs" />
+    <Compile Include="PacketDotNet\LLDP\PortDescription.cs" />
+    <Compile Include="PacketDotNet\LLDP\SystemName.cs" />
+    <Compile Include="PacketDotNet\LLDP\SystemDescription.cs" />
+    <Compile Include="PacketDotNet\LLDP\SystemCapabilities.cs" />
+    <Compile Include="PacketDotNet\LLDP\ManagementAddress.cs" />
+    <Compile Include="PacketDotNet\LLDP\OrganizationSpecific.cs" />
+    <Compile Include="PacketDotNet\LLDP\TLVTypeLength.cs" />
+    <Compile Include="PacketDotNet\LLDP\AddressFamily.cs" />
+    <Compile Include="PacketDotNet\LLDP\StringTLV.cs" />
+    <Compile Include="PacketDotNet\TLVCollection.cs" />
+  </ItemGroup>
+</Project>
